@@ -72,7 +72,8 @@ public class DOMapp {
 				}
 			}
 
-			addEtterem(document, new Etterem("masodik", "wwww.valami.com", "***", "06473643786"));
+			addEtterem(document, new Etterem(1,"masodik", "wwww.valami.com", "***", "06473643786"));
+			modifyEtterem(document, new Etterem(1,"MasodikEtterem", "wwww.valamiketto.com", "****", "06473643786"));
 
 		} catch (ParserConfigurationException | SAXException | IOException e) {
 			e.printStackTrace();
@@ -113,12 +114,60 @@ public class DOMapp {
 
 		Text telefonszamText = document.createTextNode(etterem.getTelefonszam());
 		telefonszamElement.appendChild(telefonszamText);
+		
+		System.out.println("\n\n-------------Document with new element---------------\n");
 
+		printDocument(document);
+	}
+	
+	private static void modifyEtterem(Document document, Etterem etterem) {
+		NodeList nList = document.getElementsByTagName("ettermek");
+		
+		for (int temp = 0; temp < nList.getLength(); temp++) {
+			Node nNode = nList.item(temp);
+			
+			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+				Element eElement = (Element) nNode;
+				
+				NodeList etteremList = eElement.getElementsByTagName("etterem");
+
+				for (int count = 0; count < etteremList.getLength(); count++) {
+					Element etteremElement = (Element) etteremList.item(count);
+					if(etteremElement.getAttribute("eid").equals( String.valueOf(etterem.getId()))) {
+						
+						NodeList list = etteremElement.getChildNodes();
+						
+						for(int i = 0; i < list.getLength(); i++) {
+							if (list.item(i).getNodeType() == Node.ELEMENT_NODE) {
+								Node child = list.item(i);
+								Element childElement = (Element) child;
+								System.out.println(childElement.getNodeName());
+								switch(childElement.getNodeName()) {
+									case "nev":
+										childElement.setTextContent(etterem.getNev());
+										break;
+									case "weblap":
+										childElement.setTextContent(etterem.getWeblap());
+										break;
+									case "minosites":
+										childElement.setTextContent(etterem.getMinosites());
+										break;
+									case "telefonszam":
+										childElement.setTextContent(etterem.getTelefonszam());
+										break;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		
+		System.out.println("\n\n--------------Modified document--------------\n");
 		printDocument(document);
 	}
 
 	private static void printDocument(Document document) {
-		System.out.println("\n----------------------------");
 		try {
 			TransformerFactory transformerFactory = TransformerFactory.newInstance();
 			Transformer transformer = transformerFactory.newTransformer();
