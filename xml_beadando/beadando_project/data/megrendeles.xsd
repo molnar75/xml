@@ -16,7 +16,7 @@
 	<!-- ettermek -->
     <xs:complexType name="ettermekTipus">
     	<xs:sequence>
-    		<xs:element name="etterem" type="etteremTipus"></xs:element>
+    		<xs:element name="etterem" type="etteremTipus" maxOccurs="unbounded"></xs:element>
     	</xs:sequence>
     </xs:complexType>
     
@@ -33,7 +33,7 @@
     <!-- etelek -->
     <xs:complexType name="etelekTipus">
     	<xs:sequence>
-    		<xs:element name="etel" type="etelTipus"></xs:element>
+    		<xs:element name="etel" type="etelTipus" maxOccurs="unbounded"></xs:element>
     	</xs:sequence>
     </xs:complexType>
 
@@ -59,7 +59,7 @@
 	<!-- dolgozok -->
     <xs:complexType name="dolgozokTipus">
     	<xs:sequence>
-    		<xs:element name="dolgozo" type="dolgozoTipus"></xs:element>
+    		<xs:element name="dolgozo" type="dolgozoTipus" maxOccurs="unbounded"></xs:element>
     	</xs:sequence>
     </xs:complexType>
     
@@ -85,7 +85,7 @@
 	<!-- rendezvenyek -->
 	<xs:complexType name="rendezvenyekTipus">
     	<xs:sequence>
-    		<xs:element name="rendezveny" type="rendezvenyTipus"></xs:element>
+    		<xs:element name="rendezveny" type="rendezvenyTipus" maxOccurs="unbounded"></xs:element>
     	</xs:sequence>
     </xs:complexType>
     
@@ -100,7 +100,7 @@
 	<!-- megrendelesek -->
 	<xs:complexType name="megrendelesekTipus">
     	<xs:sequence>
-    		<xs:element name="megrendeles" type="megrendelesTipus"></xs:element>
+    		<xs:element name="megrendeles" type="megrendelesTipus" maxOccurs="unbounded"></xs:element>
     	</xs:sequence>
     </xs:complexType>
     

@@ -7,6 +7,12 @@
       <minosites>****</minosites>
       <telefonszam>06703237436</telefonszam>
     </etterem>
+    <etterem eid="1">
+      <nev>Phoenix</nev>
+      <weblap>www.phoenix.hu</weblap>
+      <minosites>***</minosites>
+      <telefonszam>06703543539</telefonszam>
+    </etterem>
   </ettermek>
   <etelek>
     <etel etid="0">
@@ -41,10 +47,25 @@
         <hazszam>20.</hazszam>
       </cim>
     </rendezveny>
+    <rendezveny rid="1">
+      <idopont>2019-12-25</idopont>
+      <cim>
+        <irsz>3580</irsz>
+        <varos>Tiszaújváros</varos>
+        <utca>Szent István út</utca>
+        <hazszam>10.</hazszam>
+      </cim>
+    </rendezveny>
   </rendezvenyek>
   <megrendelesek>
     <megrendeles etterem="0" rendezveny="0">
       <ar>180000</ar>
+    </megrendeles>
+    <megrendeles etterem="1" rendezveny="0">
+      <ar>80000</ar>
+    </megrendeles>
+    <megrendeles etterem="1" rendezveny="1">
+      <ar>200000</ar>
     </megrendeles>
   </megrendelesek>
 </nyilvantartas>

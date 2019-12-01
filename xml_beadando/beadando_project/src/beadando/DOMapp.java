@@ -72,8 +72,8 @@ public class DOMapp {
 				}
 			}
 
-			addEtterem(document, new Etterem(1,"masodik", "wwww.valami.com", "***", "06473643786"));
-			modifyEtterem(document, new Etterem(1,"MasodikEtterem", "wwww.valamiketto.com", "****", "06473643786"));
+			addEtterem(document, new Etterem(2,"masodik", "wwww.valami.com", "***", "06473643786"));
+			modifyEtterem(document, new Etterem(2,"MasodikEtterem", "wwww.valamiketto.com", "****", "06473643786"));
 
 		} catch (ParserConfigurationException | SAXException | IOException e) {
 			e.printStackTrace();
