@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nyilvantartas SYSTEM "megrendeles.dtd" >
+<nyilvantartas>
+  <etelek>
+		<etel etid="et1">
+			<nev>
+				rantotta
+			</nev>
+			<ar>
+				700
+			</ar>
+			<allergenek>
+				<allergen aid="a1">
+					tej
+				</allergen>
+			</allergenek>
+			<leiras>
+				Vajon uvegesre piritott hagyman megsutott tojas
+			</leiras>
+		</etel>
+	</etelek>
+  <ettermek>
+		<etterem eid="e1">
+			<nev>
+				etterem
+			</nev>
+			<weblap>
+				www.thisetterem.com
+			</weblap>
+			<minosites>
+				****
+			</minosites>
+			<telefonszam>
+				0670387625
+			</telefonszam>
+		</etterem>
+	</ettermek>
+  <dolgozok>
+		<dolgozo did="d1">
+			<nev>
+				Dolgozo Valaki
+			</nev>
+			<beosztas>
+				foszakacs
+			</beosztas>
+			<cim>
+				<irsz>
+					3580
+				</irsz>
+				<varos>
+					Tiszaujvaros
+				</varos>
+				<utca>
+					Szent Istvan ut
+				</utca>
+				<hazszam>
+					30. 1/5.
+				</hazszam>
+			</cim>
+			<telefonszam>
+				067046573625
+			</telefonszam>
+		</dolgozo>
+	</dolgozok>
+  <rendezvenyek>
+		<rendezveny rid="r1">
+			<idopont>
+				2019.04.28.
+			</idopont>
+			<cim>
+				<irsz>
+					3580
+				</irsz>
+				<varos>
+					Tiszaujvaros
+				</varos>
+				<utca>
+					Nagy Karoly ucta
+				</utca>
+				<hazszam>
+					12.
+				</hazszam>
+			</cim>
+		</rendezveny>
+	</rendezvenyek>
+  <megrendelesek>
+		<megrendeles etterem="e1" rendezveny="r1">
+			<ar>
+				150000 Ft
+			</ar>
+		</megrendeles>
+	</megrendelesek>
+</nyilvantartas>
