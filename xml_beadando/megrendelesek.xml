@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<megrendelesekDB>
+	<etteremek>
+		<etterem id="1">
+			<nev>
+			</nev>
+			<telefonszam>
+			</telefonszam>
+			<weblap>
+			</weblap>
+			<minosites>
+			</minosites>
+		</etterem>
+	</ettermek>
+	<dolgozok>
+		<dolgozo id="1">
+			<nev>
+			</nev>
+			<telefonszam>
+			</telefonszam>
+			<beosztas>
+			</beosztas>
+			<cim>
+				<irsz>
+				</irsz>
+				<varos>
+				</varos>
+				<utca>
+				</utca>
+				<hazszam>
+				</hazszam>
+			</cim>
+		</dolgozo>
+	</dolgozok>
+	<rendezvenyek>
+	</rendezvenyek>
+	<megrendelesek>
+		<megrendeles etterem="1" rendezveny="1">
+			<ar>
+				150000
+			</ar>
+		</megrendeles>
+	</megrendelesek>
+</megrendelesekDB>
