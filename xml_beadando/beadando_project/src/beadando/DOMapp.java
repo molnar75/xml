@@ -87,7 +87,7 @@ public class DOMapp {
 		
 		Element etteremElement = document.createElement("etterem");
 		Attr attrType = document.createAttribute("eid");
-		attrType.setValue("1");
+		attrType.setValue(String.valueOf(etterem.getId()));
 		etteremElement.setAttributeNode(attrType);
 		ettermekElement.appendChild(etteremElement);
 		
